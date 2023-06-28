@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function solicitarGenetica() {
-    let genetica = prompt("Ingrese el número de la genética deseada. " + "S" + " para salir de la compra")
+    let genetica = prompt("Ingrese el número de la genética deseada. S para salir de la compra")
     if (genetica == "s" || genetica == "S") {
         return false
     } else if (validarInput(genetica)) {
@@ -56,7 +56,7 @@ function solicitarGenetica() {
 }
 
 function solicitarGramos() {
-    let gramos = prompt("Ingrese la cantidad de gramos deseada. " + "S" + " para salir de la compra")
+    let gramos = prompt("Ingrese la cantidad de gramos deseada. S para salir de la compra")
     if (gramos == "s" || gramos == "S") {
         return false
     } else if (validarInput(gramos)) {
