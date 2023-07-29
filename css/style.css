@@ -115,6 +115,7 @@ footer .nuevo-socio a {
   margin-right: 40px;
   margin-left: 40px;
   transition: all 1s;
+  width: 18rem;
 }
 .main-geneticas .cards-geneticas .card img {
   padding-top: 10px;

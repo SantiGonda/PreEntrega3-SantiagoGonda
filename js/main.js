@@ -1,6 +1,23 @@
+let carrito = [] ;
+let geneticas =new Array () ;
 
-// LOG IN
-document.addEventListener("DOMContentLoaded", () => {
+let gestor ;
+
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+
+    gestor = new GestionarGeneticas() ;
+    gestor.iniciar();
+
+
+})
+
+
+
+
+// ENTREGA 2
+/*document.addEventListener("DOMContentLoaded", () => {
     const hoy = new Date();
     alert("Bienveni@s al Club Cannábico Greeensheep \n" + hoy.toLocaleString());
 
@@ -28,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         } while (resp)
     }
-})
+
 
 function login_socio() {
     let user = prompt("Ingrese su usuario");
@@ -533,39 +550,5 @@ function ver_bitacora(){
 
 }
 
-
-/* ENTREGA 1
-function validarSocio(ci) {
-    if (isNaN(ci)) {
-        alert("Cédula incorrecta, debes ingresar solo números")
-        return false
-    } else if (ci == "11" || ci == "22" || ci == "33" || ci == "44") {
-        return true
-    } else if(ci == ""){
-        alert("Hasta luego")
-        return false
-    } else {
-        alert("Cedula no encontrada")
-        return false
-    }
-}
-
-function getSocio(ci) {
-    let socio = "";
-    switch (ci) {
-        case "11":
-            socio = "Santiago";
-            break;
-        case "22":
-            socio = "Franco";
-            break;
-        case "33":
-            socio = "Alberto";
-            break;
-        case "44":
-            socio = "Agustina";
-            break;
-    }
-    return socio;
-}
+})
 */
