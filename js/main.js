@@ -1,20 +1,76 @@
-let carrito = [] ;
-let geneticas =new Array () ;
+let carrito = [];
+let geneticas = new Array();
 
-let gestor ;
+let gestor;
+const DateTime = luxon.DateTime
+const key_actualizacion = "ultima_actualizacion";
+const key_carrito = "carrito";
 
+document.addEventListener("DOMContentLoaded", () => {
 
-document.addEventListener("DOMContentLoaded",()=>{
-
-
-    gestor = new GestionarGeneticas() ;
+    carrito = JSON.parse(localStorage.getItem(key_carrito)) || [];
+    console.log(carrito)
+    gestor = new GestionarGeneticas();
+    if(carrito){
+        carrito = gestor.cargarCarrito(carrito);
+    }
+    console.log(carrito)
     gestor.iniciar();
 
+    gestor.actualizarCarrito();
 
 })
 
+function addCarrito(id) {
+    console.log(carrito)
+    const prod = document.querySelector("#row_" + id);
+
+    let nombre = prod.querySelector('h5').textContent;
+    let precio = prod.querySelector("#precio").textContent.substring(9, 11);
+    let img = prod.querySelector("img").src;
+    let cantidad = parseInt(prod.querySelector(".form-control").value, 10) || gestor.mostrarHeader("Debes ingresar un número mayor a 0");
+    console.log(nombre)
+    console.log(precio)
+    console.log(img)
+    console.log(cantidad)
+    if (cantidad && validacionCantidad(cantidad)) {
+        let existe = carrito.find(producto => producto.id === id);
+        console.log(existe)
+        if (existe) {
+            existe.addCantidad(cantidad)
+            Toastify({
+                text: "Se actualizo la cantidad del producto",
+                duration: 2000,
+                gravity: "bottom"
+            }).showToast();
+        } else {
+            let producto = new Genetica(id, nombre, precio, img, cantidad);
+            carrito.push(producto);
+            Toastify({
+                text: "Producto agregado con exito",
+                duration: 2000,
+                gravity: "bottom"
+            }).showToast();
+        }
+        gestor.actualizarCarrito();
+        }
+    }
 
 
+function eliminar(id) {
+    gestor.eliminarProducto(id);
+}
+
+function validacionCantidad(cantidad) {
+    let val = false
+    let acumulado = 0
+    carrito.forEach(gen => {
+        acumulado += gen.cantidad
+    });
+    let suma = cantidad + acumulado;
+    suma > 40 ? gestor.mostrarHeader("No puedes comprar más de 40g.") : val = true
+    return val
+}
 
 // ENTREGA 2
 /*document.addEventListener("DOMContentLoaded", () => {

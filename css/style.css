@@ -117,10 +117,22 @@ footer .nuevo-socio a {
   transition: all 1s;
   width: 18rem;
 }
+
+@keyframes fade-in {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 .main-geneticas .cards-geneticas .card img {
   padding-top: 10px;
   border-radius: 20px;
   transition: all 1s;
+  opacity: 0;
+  animation: fade-in 0.5s ease-in 0s forwards;
 }
 .main-geneticas .cards-geneticas .card img:hover {
   transform: scale(1.5);
@@ -337,6 +349,32 @@ footer .nuevo-socio a {
   .rango {
     padding: 5px 50px 5px 50px;
   }
+}
+
+.carrito {
+  margin-right: 30px;
+}
+
+/* Carrito */
+#iconoCarrito {
+  font-size: 2rem;
+}
+#badgeCarrito {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  font-size: 0.7rem;
+  background-color: #000 !important;
+}
+
+.offcanvas {
+  margin-top: 95px;
+  border-radius: 10px 0 0 0;
+}
+
+.main {
+  margin-top: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */
