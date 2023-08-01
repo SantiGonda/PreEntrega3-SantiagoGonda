@@ -19,7 +19,7 @@ class GestionarGeneticas {
                 "nombre": "Double Cookies",
                 "precio": 20,
                 "stock": 200,
-                "img": "0308.JPG",
+                "img": "0308.jpg",
                 "descripcion": "Double Cookies Feminized es un híbrido índico/sativo de muy fácil cultivo, gran producción y repleta de tricomas por la herencia de su padre.  variedad presenta un alto THC (25% – 27%) lo que la hacen una variedad perfecta para extracciones.",
                 "web": "https://bsfseeds.com/es/tienda/double-cookies/",
                 "cantidad": 0
