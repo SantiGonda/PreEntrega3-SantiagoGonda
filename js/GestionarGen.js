@@ -9,7 +9,7 @@ class GestionarGeneticas {
                 "nombre": "Kryptonite",
                 "precio": 10,
                 "stock": 200,
-                "img": "IMG_0315.jpg",
+                "img": "IMG_0315.JPG",
                 "descripcion": "La Kryptonite de Pyramid Seeds es un fenotipo feminizado procedente de la Yumbolt, de predominancia sativa (80%), con hojas y flores esponjosas cubiertas por una fina capa de cristales. Se trata de una planta de predominancia sativa.",
                 "web": "https://www.pyramidseeds.com/es/fotodependientes/58-kryptonite.html",
                 "cantidad": 0
@@ -19,7 +19,7 @@ class GestionarGeneticas {
                 "nombre": "Double Cookies",
                 "precio": 20,
                 "stock": 200,
-                "img": "0308.jpg",
+                "img": "0308.JPG",
                 "descripcion": "Double Cookies Feminized es un híbrido índico/sativo de muy fácil cultivo, gran producción y repleta de tricomas por la herencia de su padre.  variedad presenta un alto THC (25% – 27%) lo que la hacen una variedad perfecta para extracciones.",
                 "web": "https://bsfseeds.com/es/tienda/double-cookies/",
                 "cantidad": 0
