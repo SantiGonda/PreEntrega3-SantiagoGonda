@@ -59,19 +59,6 @@
                             <a class="nav-link disabled">SINCE 2022</a>
                         </li>
                     </ul>
-                    <div class="col-3 d-flex align-items-center justify-content-end carrito">
-                        <a class="cart position-relative d-inline-flex" 
-                            aria-label="View your shopping cart"
-                            data-bs-toggle="offcanvas" 
-                            data-bs-target="#offcanvasRight" 
-                            aria-controls="offcanvasRight">
-                            <i class="fa-solid fa-cart-shopping position-relative" id="iconoCarrito">
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                                             id="badgeCarrito">0
-                            </span>
-                            </i>
-                        </a>
-                    </div>
                 </div>
             </div>
         </nav>
@@ -79,26 +66,14 @@
 
     <main class="main-geneticas">
 <section>
-    <!-- <style>
-        li{
-            font-weight: 800;
-        }
-    </style>
-    <ul>
-        <li>1.Kryptonite $10/gr</li>
-        <li>2.Double Cookies $20/gr</li>
-        <li>3.Pineapple Express $30/gr</li>
-        <li>4.Lebron Haze $40/gr</li>
-        <li>5.Radical Juice $50/gr</li>
-        <li>6.Sour Ripper $60/gr</li>
-    </ul>
-</section> -->
+    <input type="socio" class="form-control" id="buscar" placeholder="Buscar socio">
+</section>
 
         <section class="cards-geneticas">
             <div class="row" >
-                <h1 class="text-center" data-aos="flip-up" id="headerGeneticas">Flores Frescas</h1>
+                <h1 class="text-center" data-aos="flip-up" id="headerSocios">Socios</h1>
             </div>
-            <div class="row justify-content-around" id = "FloresFrescas" >
+            <div class="row justify-content-around" id = "Socios" >
                 <!-- <div class="card mb-4 shadow-lg" style="width: 18rem;">
                     <img  src="../img/cards/golosa-14.jpg" class="card-img-top" alt="Kryptonite" data-aos="zoom-in">
                     <div class="card-body d-flex flex-column">
@@ -130,12 +105,12 @@
                 </div>  -->
             </div>
         </section>
-        <section class="cards-geneticas">
+       <!--  <section class="cards-geneticas">
             <div class="row">
                 <h1 class="text-center" data-aos="flip-up">Viejas Pasiones</h1>
             </div>
             <div class="row justify-content-around" id = "ViejasPasiones" >
-                <!-- <div class="card mb-4 shadow-lg" style="width: 18rem;">
+                <div class="card mb-4 shadow-lg" style="width: 18rem;">
                     <img  src="../img/cards/IMG_0308.JPG" class="card-img-top" alt="Kryptonite" data-aos="zoom-in">
                     <div class="card-body d-flex flex-column">
                         <div>
@@ -222,33 +197,9 @@
                         <a href="https://www.ripperseeds.com/es/feminizadas/sour-ripper-semillas-feminizadas-de-marihuana"
                             class="btn btn-secondary">$60</a>
                     </div>
-                </div>-->
-            </div>
-        </section>
-
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-                <h5 id="offcanvasRightLabel">Tu pedido</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-
-                <div id="idCarrito">
-                
-                    <div class="row">
-
-                        <div class="col"></div>
-                        <div class="col">Nombre</div>
-                        <div class="col">Precio</div>
-                        <div class="col">Cantidad</div>
-                        <div class="col"></div>
-
-                    </div>
-
                 </div>
-
             </div>
-        </div>    
+        </section>-->  
     </main>
 
     <footer>
@@ -281,14 +232,14 @@
         <script src="
 https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js
 "></script>
-    <script src="../js/Genetica.js"></script>
+    <script src="../js/Socio.js"></script>
       <!-- <script src="../js/Socio.js"></script>
      <script src="../js/Login.js"></script>
      <script src="../js/RegistroBit.js"></script>
      <script src="../js/Bitacora.js"></script>
      <script src="../js/Colecciones.js"></script> -->
-     <script src="../js/GestionarGen.js"></script>
-     <script src="../js/mainGen.js"></script>
+     <script src="../js/GestionarSocios.js"></script>
+     <script src="../js/mainSocios.js"></script>
      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
      <script>
          AOS.init();
