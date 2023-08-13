@@ -2,48 +2,16 @@ class GestionarSocios {
 
     iniciar() {
 
-        socios = [
+        fetch(url)
 
-            {
-                "nro_socio": 1,
-                "nombre": "Santiago",
-                "apellido": "Gonda",
-                "ci": "11",
-            },
-            {
-                "nro_socio": 2,
-                "nombre": "Franco",
-                "apellido": "Atay",
-                "ci": "22",
-            },
-            {
-                "nro_socio": 3,
-                "nombre": "Santiago",
-                "apellido": "Mallo",
-                "ci": "33",
-            },
-            {
-                "nro_socio": 4,
-                "nombre": "Agustina",
-                "apellido": "Mantovani",
-                "ci": "44",
-            },
-            {
-                "nro_socio": 5,
-                "nombre": "Jennifer",
-                "apellido": "Gonzalez",
-                "ci": "55",
-            },
-        ]
+            .then(respuesta => respuesta.json())
+            .then(resultado => {
 
+                socios = resultado.socios;
 
-
-        this.cargarSocios(socios);
+                this.cargarSocios(socios);
+            })
     }
-
-
-
-
 
     cargarSocios(socios) {
 

@@ -5,6 +5,8 @@ const DateTime = luxon.DateTime
 const key_actualizacion_socios = "ultima_actualizacion_socios";
 const key_socios = "socios";
 
+const url = './../js/datos.json';
+
 document.addEventListener("DOMContentLoaded", () => {
 
     socios = JSON.parse(localStorage.getItem(key_socios)) || [];
