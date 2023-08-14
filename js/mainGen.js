@@ -1,17 +1,19 @@
 let carrito = [];
 let geneticas = new Array();
-
+let total = 0;
 let gestor;
 const DateTime = luxon.DateTime
 const key_actualizacion = "ultima_actualizacion";
 const key_carrito = "carrito";
+
+const url = './../js/datos.json';
 
 document.addEventListener("DOMContentLoaded", () => {
 
     carrito = JSON.parse(localStorage.getItem(key_carrito)) || [];
     console.log(carrito)
     gestor = new GestionarGeneticas();
-    if(carrito){
+    if (carrito) {
         carrito = gestor.cargarCarrito(carrito);
     }
     console.log(carrito)
@@ -53,9 +55,8 @@ function addCarrito(id) {
             }).showToast();
         }
         gestor.actualizarCarrito();
-        }
     }
-
+}
 
 function eliminar(id) {
     gestor.eliminarProducto(id);
@@ -70,6 +71,11 @@ function validacionCantidad(cantidad) {
     let suma = cantidad + acumulado;
     suma > 40 ? gestor.mostrarHeader("No puedes comprar más de 40g.") : val = true
     return val
+}
+
+function compraExitosa(total) {
+    console.log(total)
+    total > 0 ? gestor.compraExitosa() : gestor.mostrarHeader("No has ingresado nada.")
 }
 
 // ENTREGA 2
